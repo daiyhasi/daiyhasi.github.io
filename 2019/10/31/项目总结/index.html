@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>项目总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="乐淘历时一个星期,在老师的带领下总算是敲完了这个项目,收货还是很多的,下面顺着老师和自己的笔记,对页面按照页面静态布局完成情况和功能需求完成情况在回顾总结下. 静态页面出现的问题如下 页面整体布局问题. 圣杯布局 左侧固定右侧自适应布局(fiexd+padding) 利用 BFC 实现布局的原理(overflow:hidden)     页面问题需要回头复习的自我感觉有如下 rem (实现原理,)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;31&#x2F;%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="乐淘历时一个星期,在老师的带领下总算是敲完了这个项目,收货还是很多的,下面顺着老师和自己的笔记,对页面按照页面静态布局完成情况和功能需求完成情况在回顾总结下. 静态页面出现的问题如下 页面整体布局问题. 圣杯布局 左侧固定右侧自适应布局(fiexd+padding) 利用 BFC 实现布局的原理(overflow:hidden)     页面问题需要回头复习的自我感觉有如下 rem (实现原理,)">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-31T10:17:16.325Z">
+<meta name="twitter:card" content="summary">
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body style="
+
+
+  background-color: #eff0f6
+
+">
+  <div id="container">
+    <nav id="nav">
+  <header class="header">
+    <a href="/" class="title">Clover Tuan</a>
+  </header>
+  <div class="ctnWrap">
+    <div class="icons">
+      
+        
+          
+            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
+          
+        
+          
+            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
+          
+        
+          
+            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
+          
+        
+          
+            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
+          
+        
+          
+            <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn iconfont icon-github"></a>
+          
+        
+      
+    </div>
+    <div class="menu">
+      
+        
+            <a href="/" class="nav-menu ">HOME</a>
+          
+        
+            <a href="/archives" class="nav-menu ">ARCHIVE</a>
+          
+        
+            <a href="/about" class="nav-menu ">ABOUT</a>
+          
+        
+      
+    </div>
+  </div>
+</nav>
+    <div id="main"><section class="article">
+  <h2 class="title">项目总结</h2>
+  <p class="sub">Oct 31, 2019</p>
+  <article class="content">
+    <h1 id="乐淘"><a href="#乐淘" class="headerlink" title="乐淘"></a>乐淘</h1><p>历时一个星期,在老师的带领下总算是敲完了这个项目,收货还是很多的,下面顺着老师和自己的笔记,对页面按照页面静态布局完成情况和功能需求完成情况在回顾总结下.</p>
+<h2 id="静态页面"><a href="#静态页面" class="headerlink" title="静态页面"></a>静态页面</h2><h3 id="出现的问题如下"><a href="#出现的问题如下" class="headerlink" title="出现的问题如下"></a>出现的问题如下</h3><ul>
+<li>页面整体布局问题.<ul>
+<li>圣杯布局</li>
+<li>左侧固定右侧自适应布局(fiexd+padding)</li>
+<li>利用 BFC 实现布局的原理(overflow:hidden)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>页面问题需要回头复习的自我感觉有如下<ul>
+<li>rem (实现原理,)</li>
+<li>媒体查询</li>
+<li>面试常考的 div 水平垂直居中问题</li>
+<li>flex 布局 流式布局</li>
+</ul>
+</li>
+</ul>
+<h2 id="下面是各页面的功能完成情况回顾"><a href="#下面是各页面的功能完成情况回顾" class="headerlink" title="下面是各页面的功能完成情况回顾"></a>下面是各页面的功能完成情况回顾</h2><h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><ul>
+<li>关于 common 页,主内容区使用的是 mui 提供的区域滚动插件,插件所在盒子 mui 中设置的是绝对定位,所以在使用插件的时候需要给页面中的区域滚动的父盒子设置相对定位,不然就会出现整个页面都在滚动的情况</li>
+<li>首页轮播使用的是 mui 提供的轮播图插件<ul>
+<li>这里的轮播图还是静态写死的,不涉及到轮播插件初始化的问题</li>
+</ul>
+</li>
+<li>内容区是 ajax 请求返回后的数据动态渲染而成<ul>
+<li>这里我需要强调下关于模板数据的渲染问题,一直有点困惑,甚至是迷糊,每次好像数据能渲染出来就没去深究了,回头得好好看看,使用的模板引擎的数据渲染</li>
+</ul>
+</li>
+</ul>
+<h2 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h2><ul>
+<li>分类页是一个左侧固定右侧自适应的布局,左侧条目和右侧品牌展示区都是 ajax 请求动态渲染.</li>
+<li>由于数据是动态渲染,所以切换功能 click 事件绑定需要使用事件委托,给 li 父盒子 ul 绑定事件.每次 click,获取当前 click 的 li 的品牌 id,在发送请求,动态渲染</li>
+</ul>
+<h2 id="搜索历史页"><a href="#搜索历史页" class="headerlink" title="搜索历史页"></a>搜索历史页</h2><ul>
+<li><p>搜索历史页算是整个项目中比较繁琐的一个环节了.涉及到 localStorage 的存取,动态渲染,json 和数组的数据处理,还有最亮眼的页面间的传值(可能这只是个人觉得啊..)</p>
+</li>
+<li><p>功能需求就是正常的历史记录.</p>
+</li>
+<li><p>总的说来有两块内容,历史记录的展示和页面跳转到详情页,当然,此时跳转需要向详情页传递搜索的关键字.下面简述流程</p>
+<ol>
+<li>输入搜索内容,btn 点击页面会跳转到搜索详情页.当然,在开发阶段,是不会让他跳转的,继续流程,完成历史记录的展示功能.</li>
+<li>拿到搜索框的输入值,通过 localStorage 的 setItem() 方法将搜索的内容存储起来.并设置一个 key. 比如 search</li>
+<li>再次输入,此时需要将之前存好的 search 从 localStorage 中取出来,转成数组,在用 unshift()方法,将新输入的值存入数组中,</li>
+<li>最后将新数组,JSON.stringify() 再次转为字符串,最后存入 localStorage 中</li>
+</ol>
+<ul>
+<li>当然这只是 localStorage 存值取值的使用,每次新数组生成后都需要对搜索历史列表做一次重渲染.</li>
+</ul>
+<p>*</p>
+<ul>
+<li>对于有效限制的优化<ol>
+<li>历史记录的长度限制.在新数组生成后判断一下 length,若大于限制值,pop()一次</li>
+<li>去重.新数组生成之前,拿键入的值跟遍历一次数组,当然这种方案是可行的.使用数组的 indexOf()方法,可以更迅速的判断结果</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>单条删除功能.这里的 li 也是动态生出的,所以也需要使用事件委托来绑定.</li>
+<li>清空功能. 清空功能需要注意的点在于方法的调用,使用 removeItem(“key”),(我自己做的时候是使用 setItem()将历史记录的关键的内容设置为[]空数组.显然,这是不对的,或者说是不完善的)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>再说说页面跳转的传值问题,这是我在这个项目中学到的最为亮眼的技术手段.<ul>
+<li>搜索框每次输入搜索关键字,btn 点击跳转到[详情]./searchList.html 页面,这个时候在 btn 的 click 事件的执行函数中将关键字拼接到地址中. 写成这样的形式 “./searchList.html?key=鞋子”, 这样跳转后的 searchList 页面的 url 就会变成”./searchList.html?key=鞋子”这样的形式.然后在详情页面通过 location.search,就可以拿到”?key=鞋子”这个字符串.最后通过字符截取 split()就可以拿到搜索页传递过来的关键字了.这里自己说起来好像很繁琐,但是实际应用是很广的.<ul>
+<li>比如 get 方式传值,就跟这个差不多</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>当然 这个手段同样可以用在历史记录的跳转功能上.在历史记录列表渲染的时候,将关键字也同样的拼接在 url 后,这样同样也就实现了页面间传值的问题.</li>
+<li>说起来好像也没那么费劲,但是我的自我感觉是觉得这个手段太牛逼了….</li>
+</ul>
+</li>
+</ul>
+<h2 id="搜索详情页"><a href="#搜索详情页" class="headerlink" title="搜索详情页"></a>搜索详情页</h2><ul>
+<li>搜索详情页页是一个 ajax 动态渲染页面,剩余的排序功能没做了,sort()方式传一个排序函数进去,好像实现起来也不是那么复杂.当然,这里的排序肯定是需要重渲染的,也就是说,是一个异步操作,每次 click 之后,请求数据,按照要求完成排序,然后再将排好的数据重渲染.这样一个过程才是对的.</li>
+<li>这里有一个加载动画,是 css3 完成的.动画的播放是写在 beforeSend 中,在请求完成前,页面内容为动画 div,请求完成后是数据的渲染</li>
+</ul>
+<h2 id="产品详情页"><a href="#产品详情页" class="headerlink" title="产品详情页"></a>产品详情页</h2><ul>
+<li>产品详情页整个是一个大模板渲染而成的,难点在于一个模板原始语法的使用,&lt;% jscode %&gt;.在这样一个标签中可以直接写 js 代码.实现带有逻辑判断的复杂模板</li>
+<li>这里的轮播图和数字输入框插件都是动态渲染而成,在页面加载完成后需要自己手动初始化.<ul>
+<li>这里我踩了一个将近一小时的坑.页面开始渲染,想试试模板的效果,于是在 ajax 请求外,直接调用模板,并初始化轮播图,是数字输入框插件.诶…这时效果是 ok 的.这时肯定的,因为这还没涉及到异步的问题,页面是直接渲染的.当请求发出后,问题就来了,我并没有在 ajax 的回调函数中初始化(注意这才是重点),我还天真的以为自己已经初始化了.完美,找了一小时的 bug,期间完美的认为自己的 js 没有问题.ok,okok,你是最棒的!!</li>
+</ul>
+</li>
+</ul>
+<h2 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h2><ul>
+<li>额,动态渲染,没啥好说的了,接口也没提供,也没多少兴趣写了..</li>
+</ul>
+<h2 id="用户中心"><a href="#用户中心" class="headerlink" title="用户中心"></a>用户中心</h2><ul>
+<li>简单的表单校验,以及返回值的处理,当然这里使用的是 mui 提供的友好的好看的切牛逼的最接近原生界面的信息提示框</li>
+</ul>
+<h3 id="拦截跳转"><a href="#拦截跳转" class="headerlink" title="拦截跳转"></a>拦截跳转</h3><ul>
+<li>最后的最后说说购物车和用户中心的拦截跳转问题</li>
+<li>理论上,未登录用户是访问不了用户中心和购物车页面的,所以当点击切换到这两个页面时需要做一下拦截.</li>
+<li>我的做法是这样的.当加载这个页面后,向后台发送一个需要登录才能成功的请求,若返回结果是 error,便将页面跳转的 login.html.</li>
+</ul>
+<h2 id="最后说下收获吧"><a href="#最后说下收获吧" class="headerlink" title="最后说下收获吧"></a>最后说下收获吧</h2><ul>
+<li>还是不少的,最起码这个 markdown 还稍微了解了下格式吧~~</li>
+<li>页面布局,jq(实际上用的是 zepto),ajax,页面间传值,模板引擎,拦截跳转,localStorage,history,数组方法,就这么多把先.当然这部分只是移动端的内容,pc 端回头看看,考虑要不要也总结下,不过想想,pc 端管理系统也是大量的增删改查,面向接口的编程,发现没有后台这个前端没法写啊,好难受.作为工具人的小前端,毫无尊严((<del>!</del>))</li>
+</ul>
+
+  </article>
+  <footer class="f-cf">
+    
+    
+      <a href="/2019/10/27/hello-world/" class="link f-fr">Hello World⟶</a>
+    
+  </footer>
+</section></div>
+    <footer id="footer" class="f-cf">
+  d.guangying@foxmail.com
+  
+    
+      
+        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
+      
+    
+      
+        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
+      
+    
+      
+        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
+      
+    
+      
+        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
+      
+    
+      
+        · <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn">GitHub</a>
+      
+    
+  
+  <span class="copyright">All rights reserved @Clover Tuan</span>
+</footer>
+  </div>
+</body>
+</html>
