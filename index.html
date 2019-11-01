@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+
+
+
   
-  <title>dotaMyLife</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Don&amp;apos;t worry,be happy!">
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="dotaMyLife" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Don&amp;apos;t worry,be happy!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="dotaMyLife">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
@@ -13,94 +89,769 @@
 <meta property="og:description" content="Don&amp;apos;t worry,be happy!">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title>dotaMyLife</title>
   
-    <link rel="icon" href="/images/favicon.png">
-  
-  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
-  <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
-    });
-  </script>
-  <link rel="stylesheet" href="/css/index.css">
+
+
+
+
+
+
+
+
 </head>
 
-<body style="
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  
+  
+    
+  
 
-  background-color: #eff0f6
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
 
-">
-  <div id="container">
-   <div class="headband">
-      <a href="https://your-url" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-   </div>
-    <nav id="nav">
-  <header class="header">
-    <a href="/" class="title">Daiyhasi</a>
-  </header>
-  <div class="ctnWrap">
-    <div class="icons">
-      
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">dotaMyLife</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <div class="menu">
       
-        
-            <a href="/%20%7C%7C%20home" class="nav-menu ">HOME</a>
-          
-        
-            <a href="/about/%20%7C%7C%20user" class="nav-menu ">ABOUT</a>
-          
-        
-            <a href="/tags/%20%7C%7C%20tags" class="nav-menu ">TAGS</a>
-          
-        
-            <a href="/categories/%20%7C%7C%20th" class="nav-menu ">CATEGORIES</a>
-          
-        
-            <a href="/archives/%20%7C%7C%20archive" class="nav-menu ">ARCHIVES</a>
-          
-        
-            <a href="/404/%20%7C%7C%20heartbea" class="nav-menu ">COMMONWEAL</a>
-          
-        
+        <p class="site-subtitle">关于我和dota的美好年月</p>
       
-    </div>
   </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-    <div id="main">
-  <div class="project-card">
-  
-  <div class="ctnWrap">
-    <a href="/2019/10/31/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" class="title">项目总结</a>
-    <section class="desc">
-  
-</section>
-    <p class="sub">Oct 31, 2019</p>
-  </div>
-</div>
-
-  <div class="project-card">
-  
-  <div class="ctnWrap">
-    <a href="/2019/10/27/hello-world/" class="title">Hello World</a>
-    <section class="desc">
-  
-</section>
-    <p class="sub">Oct 27, 2019</p>
-  </div>
-</div>
 
 
-</div>
-    <footer id="footer" class="f-cf">
-  daiyhasi@qq.com
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
   
-  <span class="copyright">All rights reserved @daiyhasi</span>
-</footer>
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="daiyhasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dotaMyLife">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/31/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" itemprop="url">项目总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T22:34:54+08:00">
+                2019-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="乐淘"><a href="#乐淘" class="headerlink" title="乐淘"></a>乐淘</h1><p>历时一个星期,在老师的带领下总算是敲完了这个项目,收货还是很多的,下面顺着老师和自己的笔记,对页面按照页面静态布局完成情况和功能需求完成情况在回顾总结下.</p>
+<h2 id="静态页面"><a href="#静态页面" class="headerlink" title="静态页面"></a>静态页面</h2><h3 id="出现的问题如下"><a href="#出现的问题如下" class="headerlink" title="出现的问题如下"></a>出现的问题如下</h3><ul>
+<li>页面整体布局问题.<ul>
+<li>圣杯布局</li>
+<li>左侧固定右侧自适应布局(fiexd+padding)</li>
+<li>利用 BFC 实现布局的原理(overflow:hidden)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>页面问题需要回头复习的自我感觉有如下<ul>
+<li>rem (实现原理,)</li>
+<li>媒体查询</li>
+<li>面试常考的 div 水平垂直居中问题</li>
+<li>flex 布局 流式布局</li>
+</ul>
+</li>
+</ul>
+<h2 id="下面是各页面的功能完成情况回顾"><a href="#下面是各页面的功能完成情况回顾" class="headerlink" title="下面是各页面的功能完成情况回顾"></a>下面是各页面的功能完成情况回顾</h2><h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><ul>
+<li>关于 common 页,主内容区使用的是 mui 提供的区域滚动插件,插件所在盒子 mui 中设置的是绝对定位,所以在使用插件的时候需要给页面中的区域滚动的父盒子设置相对定位,不然就会出现整个页面都在滚动的情况</li>
+<li>首页轮播使用的是 mui 提供的轮播图插件<ul>
+<li>这里的轮播图还是静态写死的,不涉及到轮播插件初始化的问题</li>
+</ul>
+</li>
+<li>内容区是 ajax 请求返回后的数据动态渲染而成<ul>
+<li>这里我需要强调下关于模板数据的渲染问题,一直有点困惑,甚至是迷糊,每次好像数据能渲染出来就没去深究了,回头得好好看看,使用的模板引擎的数据渲染</li>
+</ul>
+</li>
+</ul>
+<h2 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h2><ul>
+<li>分类页是一个左侧固定右侧自适应的布局,左侧条目和右侧品牌展示区都是 ajax 请求动态渲染.</li>
+<li>由于数据是动态渲染,所以切换功能 click 事件绑定需要使用事件委托,给 li 父盒子 ul 绑定事件.每次 click,获取当前 click 的 li 的品牌 id,在发送请求,动态渲染</li>
+</ul>
+<h2 id="搜索历史页"><a href="#搜索历史页" class="headerlink" title="搜索历史页"></a>搜索历史页</h2><ul>
+<li><p>搜索历史页算是整个项目中比较繁琐的一个环节了.涉及到 localStorage 的存取,动态渲染,json 和数组的数据处理,还有最亮眼的页面间的传值(可能这只是个人觉得啊..)</p>
+</li>
+<li><p>功能需求就是正常的历史记录.</p>
+</li>
+<li><p>总的说来有两块内容,历史记录的展示和页面跳转到详情页,当然,此时跳转需要向详情页传递搜索的关键字.下面简述流程</p>
+<ol>
+<li>输入搜索内容,btn 点击页面会跳转到搜索详情页.当然,在开发阶段,是不会让他跳转的,继续流程,完成历史记录的展示功能.</li>
+<li>拿到搜索框的输入值,通过 localStorage 的 setItem() 方法将搜索的内容存储起来.并设置一个 key. 比如 search</li>
+<li>再次输入,此时需要将之前存好的 search 从 localStorage 中取出来,转成数组,在用 unshift()方法,将新输入的值存入数组中,</li>
+<li>最后将新数组,JSON.stringify() 再次转为字符串,最后存入 localStorage 中</li>
+</ol>
+<ul>
+<li>当然这只是 localStorage 存值取值的使用,每次新数组生成后都需要对搜索历史列表做一次重渲染.</li>
+</ul>
+<p>*</p>
+<ul>
+<li>对于有效限制的优化<ol>
+<li>历史记录的长度限制.在新数组生成后判断一下 length,若大于限制值,pop()一次</li>
+<li>去重.新数组生成之前,拿键入的值跟遍历一次数组,当然这种方案是可行的.使用数组的 indexOf()方法,可以更迅速的判断结果</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>单条删除功能.这里的 li 也是动态生出的,所以也需要使用事件委托来绑定.</li>
+<li>清空功能. 清空功能需要注意的点在于方法的调用,使用 removeItem(“key”),(我自己做的时候是使用 setItem()将历史记录的关键的内容设置为[]空数组.显然,这是不对的,或者说是不完善的)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>再说说页面跳转的传值问题,这是我在这个项目中学到的最为亮眼的技术手段.<ul>
+<li>搜索框每次输入搜索关键字,btn 点击跳转到[详情]./searchList.html 页面,这个时候在 btn 的 click 事件的执行函数中将关键字拼接到地址中. 写成这样的形式 “./searchList.html?key=鞋子”, 这样跳转后的 searchList 页面的 url 就会变成”./searchList.html?key=鞋子”这样的形式.然后在详情页面通过 location.search,就可以拿到”?key=鞋子”这个字符串.最后通过字符截取 split()就可以拿到搜索页传递过来的关键字了.这里自己说起来好像很繁琐,但是实际应用是很广的.<ul>
+<li>比如 get 方式传值,就跟这个差不多</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>当然 这个手段同样可以用在历史记录的跳转功能上.在历史记录列表渲染的时候,将关键字也同样的拼接在 url 后,这样同样也就实现了页面间传值的问题.</li>
+<li>说起来好像也没那么费劲,但是我的自我感觉是觉得这个手段太牛逼了….</li>
+</ul>
+</li>
+</ul>
+<h2 id="搜索详情页"><a href="#搜索详情页" class="headerlink" title="搜索详情页"></a>搜索详情页</h2><ul>
+<li>搜索详情页页是一个 ajax 动态渲染页面,剩余的排序功能没做了,sort()方式传一个排序函数进去,好像实现起来也不是那么复杂.当然,这里的排序肯定是需要重渲染的,也就是说,是一个异步操作,每次 click 之后,请求数据,按照要求完成排序,然后再将排好的数据重渲染.这样一个过程才是对的.</li>
+<li>这里有一个加载动画,是 css3 完成的.动画的播放是写在 beforeSend 中,在请求完成前,页面内容为动画 div,请求完成后是数据的渲染</li>
+</ul>
+<h2 id="产品详情页"><a href="#产品详情页" class="headerlink" title="产品详情页"></a>产品详情页</h2><ul>
+<li>产品详情页整个是一个大模板渲染而成的,难点在于一个模板原始语法的使用,&lt;% jscode %&gt;.在这样一个标签中可以直接写 js 代码.实现带有逻辑判断的复杂模板</li>
+<li>这里的轮播图和数字输入框插件都是动态渲染而成,在页面加载完成后需要自己手动初始化.<ul>
+<li>这里我踩了一个将近一小时的坑.页面开始渲染,想试试模板的效果,于是在 ajax 请求外,直接调用模板,并初始化轮播图,是数字输入框插件.诶…这时效果是 ok 的.这时肯定的,因为这还没涉及到异步的问题,页面是直接渲染的.当请求发出后,问题就来了,我并没有在 ajax 的回调函数中初始化(注意这才是重点),我还天真的以为自己已经初始化了.完美,找了一小时的 bug,期间完美的认为自己的 js 没有问题.ok,okok,你是最棒的!!</li>
+</ul>
+</li>
+</ul>
+<h2 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h2><ul>
+<li>额,动态渲染,没啥好说的了,接口也没提供,也没多少兴趣写了..</li>
+</ul>
+<h2 id="用户中心"><a href="#用户中心" class="headerlink" title="用户中心"></a>用户中心</h2><ul>
+<li>简单的表单校验,以及返回值的处理,当然这里使用的是 mui 提供的友好的好看的切牛逼的最接近原生界面的信息提示框</li>
+</ul>
+<h3 id="拦截跳转"><a href="#拦截跳转" class="headerlink" title="拦截跳转"></a>拦截跳转</h3><ul>
+<li>最后的最后说说购物车和用户中心的拦截跳转问题</li>
+<li>理论上,未登录用户是访问不了用户中心和购物车页面的,所以当点击切换到这两个页面时需要做一下拦截.</li>
+<li>我的做法是这样的.当加载这个页面后,向后台发送一个需要登录才能成功的请求,若返回结果是 error,便将页面跳转的 login.html.</li>
+</ul>
+<h2 id="最后说下收获吧"><a href="#最后说下收获吧" class="headerlink" title="最后说下收获吧"></a>最后说下收获吧</h2><ul>
+<li>还是不少的,最起码这个 markdown 还稍微了解了下格式吧~~</li>
+<li>页面布局,jq(实际上用的是 zepto),ajax,页面间传值,模板引擎,拦截跳转,localStorage,history,数组方法,就这么多把先.当然这部分只是移动端的内容,pc 端回头看看,考虑要不要也总结下,不过想想,pc 端管理系统也是大量的增删改查,面向接口的编程,发现没有后台这个前端没法写啊,好难受.作为工具人的小前端,毫无尊严((<del>!</del>))</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/27/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="daiyhasi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dotaMyLife">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/27/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-27T22:42:13+08:00">
+                2019-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">daiyhasi</p>
+              <p class="site-description motion-element" itemprop="description">Don't worry,be happy!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">daiyhasi</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
