@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://daiyhasi.top/"/>
-  <updated>2019-10-31T10:17:16.325Z</updated>
+  <updated>2019-12-24T13:31:34.791Z</updated>
   <id>http://daiyhasi.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue 源码学习日记</title>
+    <link href="http://daiyhasi.top/2019/12/24/%E6%96%B0%E7%AF%87%E7%AB%A0/"/>
+    <id>http://daiyhasi.top/2019/12/24/新篇章/</id>
+    <published>2019-12-24T08:41:01.619Z</published>
+    <updated>2019-12-24T13:31:34.791Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="记录下-vue-源码学习过程"><a href="#记录下-vue-源码学习过程" class="headerlink" title="记录下 vue 源码学习过程"></a>记录下 vue 源码学习过程</h2><h3 id="资料来源"><a href="#资料来源" class="headerlink" title="资料来源"></a>资料来源</h3><ul><li><p><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">vue.js 源码</a></p></li><li><p><a href="https://nlrx-wjc.github.io/Learn-Vue-Source-Code/" target="_blank" rel="noopener">逐行剖析 Vue.js 源码</a></p></li><li><p>手写 miniVue<a href="https://www.bilibili.com/video/av54530725" target="_blank" rel="noopener">视频链接</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;记录下-vue-源码学习过程&quot;&gt;&lt;a href=&quot;#记录下-vue-源码学习过程&quot; class=&quot;headerlink&quot; title=&quot;记录下 vue 源码学习过程&quot;&gt;&lt;/a&gt;记录下 vue 源码学习过程&lt;/h2&gt;&lt;h3 id=&quot;资料来源&quot;&gt;&lt;a href=&quot;#资
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>项目总结</title>

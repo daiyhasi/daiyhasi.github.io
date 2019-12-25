@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vue 源码学习日记</title>
+    <url>/2019/12/24/%E6%96%B0%E7%AF%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="记录下-vue-源码学习过程"><a href="#记录下-vue-源码学习过程" class="headerlink" title="记录下 vue 源码学习过程"></a>记录下 vue 源码学习过程</h2><h3 id="资料来源"><a href="#资料来源" class="headerlink" title="资料来源"></a>资料来源</h3><ul>
+<li><p><a href="https://github.com/vuejs/vue" target="_blank" rel="noopener">vue.js 源码</a></p>
+</li>
+<li><p><a href="https://nlrx-wjc.github.io/Learn-Vue-Source-Code/" target="_blank" rel="noopener">逐行剖析 Vue.js 源码</a></p>
+</li>
+<li><p>手写 miniVue<a href="https://www.bilibili.com/video/av54530725" target="_blank" rel="noopener">视频链接</a></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>项目总结</title>
     <url>/2019/10/31/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<h1 id="乐淘"><a href="#乐淘" class="headerlink" title="乐淘"></a>乐淘</h1><p>历时一个星期,在老师的带领下总算是敲完了这个项目,收货还是很多的,下面顺着老师和自己的笔记,对页面按照页面静态布局完成情况和功能需求完成情况在回顾总结下.</p>
