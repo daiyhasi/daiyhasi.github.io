@@ -82,14 +82,14 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="1、v-if 和 v-show 区分使用场景v-if 是 真正 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show  就简单得多， 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 display 属性进行切换。所以，v-if 适用于">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http:&#x2F;&#x2F;daiyhasi.top&#x2F;2019&#x2F;10&#x2F;27&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="Vue的性能优化">
+<meta property="og:url" content="http:&#x2F;&#x2F;daiyhasi.top&#x2F;2019&#x2F;12&#x2F;25&#x2F;vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96&#x2F;index.html">
 <meta property="og:site_name" content="dotaMyLife">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1、v-if 和 v-show 区分使用场景v-if 是 真正 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show  就简单得多， 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 display 属性进行切换。所以，v-if 适用于">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-27T14:42:13.757Z">
+<meta property="og:updated_time" content="2019-12-25T07:31:37.210Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://daiyhasi.top/2019/10/27/hello-world/"/>
+  <link rel="canonical" href="http://daiyhasi.top/2019/12/25/vue的性能优化/"/>
 
 
 
 
 
-  <title>Hello World | dotaMyLife</title>
+  <title>Vue的性能优化 | dotaMyLife</title>
   
 
 
@@ -288,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://daiyhasi.top/2019/10/27/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://daiyhasi.top/2019/12/25/vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="daiyhasi">
@@ -305,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Vue的性能优化</h1>
         
 
         <div class="post-meta">
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-27T22:42:13+08:00">
-                2019-10-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-25T15:32:04+08:00">
+                2019-12-25
               </time>
             
 
@@ -336,8 +336,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/10/27/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/27/hello-world/" itemprop="commentCount"></span>
+                <a href="/2019/12/25/vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/25/vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2019/10/27/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+             <span id="/2019/12/25/vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="leancloud_visitors" data-flag-title="Vue的性能优化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -394,19 +394,54 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="1、v-if-和-v-show-区分使用场景"><a href="#1、v-if-和-v-show-区分使用场景" class="headerlink" title="1、v-if 和 v-show 区分使用场景"></a>1、v-if 和 v-show 区分使用场景</h2><p>v-if 是 真正 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；<br>也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</p>
+<p>v-show  就简单得多， 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 display 属性进行切换。<br>所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；v-show 则适用于需要非常频繁切换条件的场景。</p>
+<h3 id="2、computed-和-watch-区分使用场景"><a href="#2、computed-和-watch-区分使用场景" class="headerlink" title="2、computed 和 watch 区分使用场景"></a>2、computed 和 watch 区分使用场景</h3><p>computed： 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，<br>下一次获取 computed 的值时才会重新计算 computed 的值；<br>watch： 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作；</p>
+<p>运用场景：<br>当我们需要进行数值计算，并且依赖于其它数据时，应该使用 computed，因为可以利用 computed 的缓存特性，避免每次获取值时，都要重新计算；</p>
+<p>当我们需要在数据变化时执行异步或开销较大的操作时，应该使用 watch，使用  watch  选项允许我们执行异步操作 ( 访问一个 API )，<br>限制我们执行该操作的频率，并在我们得到最终结果前，设置中间状态。这些都是计算属性无法做到的。</p>
+<h3 id="3、v-for-遍历必须为-item-添加-key，且避免同时使用-v-if"><a href="#3、v-for-遍历必须为-item-添加-key，且避免同时使用-v-if" class="headerlink" title="3、v-for 遍历必须为 item 添加 key，且避免同时使用 v-if"></a>3、v-for 遍历必须为 item 添加 key，且避免同时使用 v-if</h3><p>（1）v-for 遍历必须为 item 添加 key<br>在列表数据进行遍历渲染时，需要为每一项 item 设置唯一 key 值，方便 Vue.js 内部机制精准找到该条列表数据。<br>当 state 更新时，新的状态值和旧的状态值对比，较快地定位到 diff 。</p>
+<p>（2）v-for 遍历避免同时使用 v-if<br>v-for 比 v-if 优先级高，如果每一次都需要遍历整个数组，将会影响速度，尤其是当之需要渲染很小一部分的时候，必要情况下应该替换成 computed 属性。</p>
+<p>推荐：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li</span><br><span class="line">    v-<span class="keyword">for</span>=<span class="string">"user in activeUsers"</span> :key=<span class="string">"user.id"</span>&gt;</span><br><span class="line">    &#123;&#123; user.name &#125;&#125;</span><br><span class="line">   &lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp"> &lt;/u</span>l&gt;</span><br><span class="line">   computed: &#123;</span><br><span class="line">       activeUsers: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">this</span>.users.filter(<span class="function"><span class="keyword">function</span> (<span class="params">user</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">return</span> user.isActive</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>不推荐：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">   &lt;li</span><br><span class="line">       v-<span class="keyword">for</span>=<span class="string">"user in users"</span></span><br><span class="line">       v-<span class="keyword">if</span>=<span class="string">"user.isActive"</span></span><br><span class="line">       :key=<span class="string">"user.id"</span>&gt;</span><br><span class="line">       &#123;&#123; user.name &#125;&#125;</span><br><span class="line">   &lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="4、长列表性能优化"><a href="#4、长列表性能优化" class="headerlink" title="4、长列表性能优化"></a>4、长列表性能优化</h3><p>Vue 会通过 Object.defineProperty 对数据进行劫持，来实现视图响应数据的变化，然而有些时候我们的组件就是纯粹的数据展示，<br>不会有任何改变，我们就不需要 Vue 来劫持我们的数据，在大量数据展示的情况下，这能够很明显的减少组件初始化的时间，<br>那如何禁止 Vue 劫持我们的数据呢？可以通过 Object.freeze 方法来冻结一个对象，一旦被冻结的对象就再也不能被修改了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data: <span class="function"><span class="params">()</span> =&gt;</span> (&#123;</span><br><span class="line">    users: &#123;&#125;</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="keyword">async</span> created() &#123;</span><br><span class="line">    <span class="keyword">const</span> users = <span class="keyword">await</span> axios.get(<span class="string">'/api/users'</span>)</span><br><span class="line">    <span class="keyword">this</span>.users = <span class="built_in">Object</span>.freeze(users)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="5、事件的销毁"><a href="#5、事件的销毁" class="headerlink" title="5、事件的销毁"></a>5、事件的销毁</h3><p>Vue 组件销毁时，会自动清理它与其它实例的连接，解绑它的全部指令及事件监听器，但是仅限于组件本身的事件。<br>如果在 js 内使用 addEventListener 等方式是不会自动销毁的，我们需要在组件销毁时手动移除这些事件的监听，以免造成内存泄露，如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">addEventListener(<span class="string">'click'</span>, <span class="keyword">this</span>.click, <span class="literal">false</span>)</span><br><span class="line">&#125;,</span><br><span class="line">beforeDestroy() &#123;</span><br><span class="line">removeEventListener(<span class="string">'click'</span>, <span class="keyword">this</span>.click, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="6、图片资源懒加载"><a href="#6、图片资源懒加载" class="headerlink" title="6、图片资源懒加载"></a>6、图片资源懒加载</h3><p>对于图片过多的页面，为了加速页面加载速度，所以很多时候我们需要将页面内未出现在可视区域内的图片先不做加载，<br>等到滚动到可视区域后再去加载。这样对于页面加载性能上会有很大的提升，也提高了用户体验。<br>我们在项目中使用 Vue 的 vue-lazyload 插件：<br>（1）安装插件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-lazyload --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>（2）在入口文件 man.js 中引入并使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> VueLazyload <span class="keyword">from</span> <span class="string">'vue-lazyload'</span></span><br><span class="line"></span><br><span class="line">复制代码然后再 vue 中直接使用</span><br><span class="line">Vue.use(VueLazyload)</span><br></pre></td></tr></table></figure>
+
+<p>复制代码或者添加自定义选项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(VueLazyload, &#123;</span><br><span class="line">  preLoad: <span class="number">1.3</span>,</span><br><span class="line">  error: <span class="string">'dist/error.png'</span>,</span><br><span class="line">  loading: <span class="string">'dist/loading.gif'</span>,</span><br><span class="line">  attempt: <span class="number">1</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>（3）在 vue 文件中将 img 标签的 src 属性直接改为 v-lazy ，从而将图片显示方式更改为懒加载显示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">v-lazy</span>=<span class="string">"/static/img/1.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上为 vue-lazyload 插件的简单使用，如果要看插件的更多参数选项，可以查看 vue-lazyload 的 github 地址。<br><a href="https://github.com/hilongjw/vue-lazyload" target="_blank" rel="noopener">https://github.com/hilongjw/vue-lazyload</a></p>
+<h3 id="7、路由懒加载"><a href="#7、路由懒加载" class="headerlink" title="7、路由懒加载"></a>7、路由懒加载</h3><p>Vue 是单页面应用，可能会有很多的路由引入 ，这样使用 webpcak 打包后的文件很大，<br>当进入首页时，加载的资源过多，页面会出现白屏的情况，不利于用户体验。<br>如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应的组件，这样就更加高效了。<br>这样会大大提高首屏显示的速度，但是可能其他的页面的速度就会降下来。<br>路由懒加载：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(<span class="string">'./Foo.vue'</span>)</span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [&#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、第三方插件的按需引入"><a href="#8、第三方插件的按需引入" class="headerlink" title="8、第三方插件的按需引入"></a>8、第三方插件的按需引入</h3><p>我们在项目中经常会需要引入第三方插件，如果我们直接引入整个插件，会导致项目的体积太大，我们可以借助 babel-plugin-component ，<br>然后可以只引入需要的组件，以达到减小项目体积的目的。以下为项目中引入 element-ui 组件库为例：<br>（1）首先，安装 babel-plugin-component ：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-plugin-component -D</span><br></pre></td></tr></table></figure>
+
+<p>（2）然后，将 .babelrc 修改为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="string">"presets"</span>: [[<span class="string">"es2015"</span>, &#123; <span class="string">"modules"</span>: <span class="literal">false</span> &#125;]],</span><br><span class="line"><span class="string">"plugins"</span>: [</span><br><span class="line">[</span><br><span class="line"><span class="string">"component"</span>,</span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"libraryName"</span>: <span class="string">"element-ui"</span>,</span><br><span class="line"><span class="string">"styleLibraryName"</span>: <span class="string">"theme-chalk"</span></span><br><span class="line">&#125;</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（3）在 main.js 中引入部分组件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Button, Select &#125; <span class="keyword">from</span> <span class="string">'element-ui'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Button)</span><br><span class="line">Vue.use(Select)</span><br></pre></td></tr></table></figure>
+
+<h3 id="9、优化无限列表性能"><a href="#9、优化无限列表性能" class="headerlink" title="9、优化无限列表性能"></a>9、优化无限列表性能</h3><p>如果你的应用存在非常长或者无限滚动的列表，那么需要采用   窗口化   的技术来优化性能，只需要渲染少部分区域的内容，减少重新渲染组件和创建 dom 节点的时间。<br>你可以参考以下开源项目 vue-virtual-scroll-list  和  vue-virtual-scroller 来优化这种无限列表的场景的。<br>vue-virtual-scroll-list：<a href="https://github.com/tangbc/vue-virtual-scroll-list" target="_blank" rel="noopener">https://github.com/tangbc/vue-virtual-scroll-list</a><br>vue-virtual-scroller： <a href="https://github.com/Akryum/vue-virtual-scroller" target="_blank" rel="noopener">https://github.com/Akryum/vue-virtual-scroller</a></p>
+<h3 id="10、小工具"><a href="#10、小工具" class="headerlink" title="10、小工具"></a>10、小工具</h3><p>第一步：下载 nvm 并安装 (推荐使用 nvm-setup.zip)<br><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<p>第二步：使用 nvm 命令切换 node 版本</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="comment">// 会提示 nvw 下的相关命令</span></span><br><span class="line">nvm ls <span class="comment">// 查看已安装 node 版本</span></span><br><span class="line">nvm install vXX <span class="comment">// 安装对应 vXX 版本的 node</span></span><br><span class="line">nvm uninstall vXX <span class="comment">// 卸载对应 vXX 版本的 node</span></span><br><span class="line">nvm use xxx <span class="comment">// 选择使用 XXX 版本</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -455,15 +490,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/12/25/Vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" rel="next" title="Vue组件间传值方式">
+                <i class="fa fa-chevron-left"></i> Vue组件间传值方式
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/31/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/" rel="prev" title="项目总结">
-                项目总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,7 +652,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、v-if-和-v-show-区分使用场景"><span class="nav-number">1.</span> <span class="nav-text">1、v-if 和 v-show 区分使用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2、computed-和-watch-区分使用场景"><span class="nav-number">1.1.</span> <span class="nav-text">2、computed 和 watch 区分使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、v-for-遍历必须为-item-添加-key，且避免同时使用-v-if"><span class="nav-number">1.2.</span> <span class="nav-text">3、v-for 遍历必须为 item 添加 key，且避免同时使用 v-if</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、长列表性能优化"><span class="nav-number">1.3.</span> <span class="nav-text">4、长列表性能优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、事件的销毁"><span class="nav-number">1.4.</span> <span class="nav-text">5、事件的销毁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、图片资源懒加载"><span class="nav-number">1.5.</span> <span class="nav-text">6、图片资源懒加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、路由懒加载"><span class="nav-number">1.6.</span> <span class="nav-text">7、路由懒加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、第三方插件的按需引入"><span class="nav-number">1.7.</span> <span class="nav-text">8、第三方插件的按需引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、优化无限列表性能"><span class="nav-number">1.8.</span> <span class="nav-text">9、优化无限列表性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、小工具"><span class="nav-number">1.9.</span> <span class="nav-text">10、小工具</span></a></li></ol></li></ol></div>
             
 
           </div>
