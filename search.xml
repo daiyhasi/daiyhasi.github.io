@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vue组件间传值方式</title>
+    <url>/2019/12/25/Vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>组件三要素：<br>prop，插槽，事件</p>
+<p>prop 传递数据是通过绑定在组件标签本身传递的，而插槽是将组件标签包含的内容传递到子组件对象的<slot>元素内。</p>
+<p>其实就是传递数据、获取数据和操作数据</p>
+<p>那么引申一下，就是怎么在子组件操作父组件的数据，怎么在父组件操作子组件的数据</p>
+<h1 id="父组件操作子组件的数据就是给子组件传递数据、修改或访问子组件的数据，方式有哪些？"><a href="#父组件操作子组件的数据就是给子组件传递数据、修改或访问子组件的数据，方式有哪些？" class="headerlink" title="父组件操作子组件的数据就是给子组件传递数据、修改或访问子组件的数据，方式有哪些？"></a>父组件操作子组件的数据就是给子组件传递数据、修改或访问子组件的数据，方式有哪些？</h1><p>传递数据的方式：prop，将自己的数据传递给子组件，子组件通过注册 props:{}接收父组件传递过来的数据<br>修改和访问子组件的数据：<br>方式一：子组件通过$emit(‘eventName’, param1,…,paramN)这种方式将自己的数据传递给父组件，父组件通过监听@eventName事件名访问子组件数据<br>方式二: 通过给子组件注册ref特性，ref是该组件唯一的标识，可以通过this.$refs.refName 访问子组件 data,methods,computed。。。等数据。<br>eg：<br>子组件：<br>…<br>methods:{<br>sayHi:function(){<br>console.log(‘hi, 派大星’)<br>}<br>}</p>
+<p>父组件中：<br>&lt;base-input ref=”usernameInput” @click=”clickme”&gt;</base-input><br>…<br>methods:{<br>clickme:() =&gt; {<br>this.$refs.usernameInput.sayHi()<br>}<br>}</p>
+<p>也可以给子组件的某个元素比如 div 注册 ref 特性直接在父组件件中访问子组件的 div 元素，比如修改颜色…</p>
+<h1 id="子组件操作父组件的数据就是给子组件传递、修改或访问父组件的数据，方式有哪些？"><a href="#子组件操作父组件的数据就是给子组件传递、修改或访问父组件的数据，方式有哪些？" class="headerlink" title="子组件操作父组件的数据就是给子组件传递、修改或访问父组件的数据，方式有哪些？"></a>子组件操作父组件的数据就是给子组件传递、修改或访问父组件的数据，方式有哪些？</h1><p>传递数据的方式：$emit()<br>访问或修改的方式：<br>  方式一：通过props接收的数据访问<br>  方式二：通过$root 对象，访问父组件的数据和方法，$root 对象就是指 vm 实例<br>eg:<br>父组件:<br>…<br>data:{<br>person: ‘Jackson Yee’<br>},<br>methods:{<br>sing(){<br>console.log(‘陷落美好’)<br>}<br>}</p>
+<p>子组件：<br>…<br>methods:{<br>clicksong(){<br>this.$root.sing()<br>  }<br>}<br>  方式三：$parent 对象可以用来从一个子组件访问父组件的实例。<br>子组件：<br>methods:{<br>clicksong(){<br>this.$parent.sing()<br>  }<br>}<br>甚至可以访问爷爷组件的数据。this.$parent.$parent.msg</p>
+<h1 id="非父子组件的通讯？"><a href="#非父子组件的通讯？" class="headerlink" title="非父子组件的通讯？"></a>非父子组件的通讯？</h1><p>方式一：全局创建一个空 vm 实例,通过给该实例监听和触发事件传递参数<br>eg:<br>var vm = new Vue();<br>vm.$emit();<br>vm.$on();<br>方式二：this.$parent.$parent.$parent.msg<br>方式三：【依赖注入】，通过提供一对 provide 和 inject 选项来传递数据，传递的普通数据是不可以响应的，但是如果传入的是一个可监听的对象，那么这个对象的属性还是可以响应式的。<br>provide 选项指定想要提供给后代组件的数据/方法。<br>inject 选项在任何后代组件里，都可以使用 inject 来接收想要添加在后代组件上的来自于祖先组件的数据/方法；<br>可以把依赖注入看作一部分“大范围有效的 prop”，和 props 相比：<br>祖先组件不需要知道哪些后代组件使用它提供的属性<br>后代组件不需要知道被注入的属性来自哪里</p>
+<p>eg：<br>祖先组件中定义了一个 provide 选项，<br>…<br>data: {<br>msg: ‘hello’<br>}<br>provide: function () {<br>return {<br>msgMap: this.msg<br>}<br>}<br>后代组件中<br>…<br>data:{<br>…<br>},<br>inject:[‘msgMap’]</p>
+<h1 id="还可以通过-localStorage、vuex"><a href="#还可以通过-localStorage、vuex" class="headerlink" title="还可以通过 localStorage、vuex"></a>还可以通过 localStorage、vuex</h1><p>插槽内的数据传递<br>父传给子，直接写在组件标签中间：<br><component-son><br>&lt;template #lala&gt;</p>
+<h1>啦啦啦啦啦啦</h1>
+</template>
+</component-son>
+子接收,<slot>元素接收：
+
+<div>
+  <slot name="lala"></slot>
+</div>
+
+<p>子传父，需要在<slot>标签上绑定参数,v-bind:params=”值”</p>
+<div>
+  <slot v-bind:hi="hi" name="lala"></slot>
+</div> 
+父接收，通过v-slot:slotNAme="obj",
+  <component-son>
+    <template v-slot:lala="obj">
+      <h1></h1>
+    </template>
+  </component-son>
+
+<p>v-slot:slotNAme=”obj”， obj得到的始终都是对象，obj其实是一个函数的返回值，可以这样认为：</p>
+<p>obj = function(only){<br>return {<br>only<br>}<br>}<br>所以可以对 propSlot 进行解构，直接拿到 slot 对象<br><component-son><br><template v-slot:lala="{hi}"></p>
+<h1></h1>
+</template>
+</component-son>
+
+<h1 id="事件侦听器"><a href="#事件侦听器" class="headerlink" title="事件侦听器"></a>事件侦听器</h1><p>vue 有三种事件侦听器，都是通过$emit触发事件：<br>$on(eventName, eventHandler)：监听当前实例上的自定义事件。事件可以由 vm.$emit触发。回调函数会接收所有传入事件触发函数的额外参数。<br>$once(eventName, eventHandler)：一次性侦听一个自定义事件，只触发一次。一旦触发之后，监听器就会被移除。<br>$off(eventName, eventHandler) ：停止侦听一个事件，移除自定义事件监听器。<br>如果没有提供参数，则移除所有的事件监听器；<br>如果只提供了事件，则移除该事件所有的监听器；<br>如果同时提供了事件与回调，则只移除这个回调的监听器。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue 源码学习日记</title>
     <url>/2019/12/24/%E6%96%B0%E7%AF%87%E7%AB%A0/</url>
     <content><![CDATA[<h2 id="记录下-vue-源码学习过程"><a href="#记录下-vue-源码学习过程" class="headerlink" title="记录下 vue 源码学习过程"></a>记录下 vue 源码学习过程</h2><h3 id="资料来源"><a href="#资料来源" class="headerlink" title="资料来源"></a>资料来源</h3><ul>
