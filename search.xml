@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ts中的数据类型</title>
+    <url>/2020/03/27/ts%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="TS-中的数据类型"><a href="#TS-中的数据类型" class="headerlink" title="TS 中的数据类型"></a>TS 中的数据类型</h1><h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><p><code>let state:boolean = false //(ts 中变量的声明方式)</code></p>
+<p>声明变量并加上冒号类型,这是 ts 中声明变量的方式</p>
+<p><strong>注意: TS 中变量一旦声明类型,则该变量就无法再次更改为其他类型的数据</strong></p>
+<h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h3><p><code>let num:number = 123</code><br><code>let num:number = 0b10</code></p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p><code>let str:string = &#39;nihao&#39;</code></p>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>1.<br><code>let arr:number[] = [1,2,3]</code></p>
+<p>2.数组泛型<br><code>let arr:Array&lt;number&gt;=[1,2,3]</code></p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。 比如，你可以定义一对值分别为 string 和 number 类型的元组</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x: [string, number]</span><br><span class="line"><span class="comment">// Initialize it</span></span><br><span class="line">x = [<span class="string">'hello'</span>, <span class="number">10</span>] <span class="comment">// OK</span></span><br><span class="line"><span class="comment">// Initialize it incorrectly</span></span><br><span class="line">x = [<span class="number">10</span>, <span class="string">'hello'</span>] <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>当访问一个越界的元素，会使用联合类型替代</strong></p>
+<h3 id="枚举类型-enum"><a href="#枚举类型-enum" class="headerlink" title="枚举类型 enum"></a>枚举类型 enum</h3><p>enum 类型是对 JavaScript 标准数据类型的一个补充。 像 C#等其它语言一样，使用枚举类型可以为一组数值赋予友好的名字</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum flag &#123;success=<span class="number">1</span>,err=<span class="number">0</span>&#125;</span><br><span class="line"><span class="keyword">let</span> c:flag = flag.success <span class="comment">//c取到枚举数据类型的数值1,</span></span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，从 0 开始为元素编号。 你也可以手动的指定成员的数值。 例如，我们将上面的例子改成从 1 开始编号：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum flag &#123;success=<span class="number">1</span>,err&#125;</span><br><span class="line"><span class="keyword">let</span> c:flag = flag.err <span class="comment">//c取到枚举数据类型的数值0,</span></span><br></pre></td></tr></table></figure>
+
+<p>或者，全部都采用手动赋值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum flag &#123;success=<span class="number">1</span>,err=<span class="number">501</span>&#125;</span><br><span class="line"><span class="keyword">let</span> c:flag = flag.err <span class="comment">//c取到枚举数据类型的数值501,</span></span><br></pre></td></tr></table></figure>
+
+<p>枚举数据类型存在的意义在于提供一个从名字到值的映射关系</p>
+<h3 id="Any"><a href="#Any" class="headerlink" title="Any"></a>Any</h3><p>未指定类型的变量可以用 Any 来标记这些变量</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str: any = <span class="string">'123'</span></span><br><span class="line">str = <span class="number">123</span> <span class="comment">//这个时候可以改变str的数据类型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Void"><a href="#Void" class="headerlink" title="Void"></a>Void</h3><p>某种程度上来说，void 类型像是与 any 类型相反，它表示没有任何类型。 当一个函数没有返回值时，你通常会见到其返回值类型是 void</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">  <span class="comment">//这个写法是表示这个函数的返回值是void</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'测试代码'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Null-和-undefined"><a href="#Null-和-undefined" class="headerlink" title="Null 和 undefined"></a>Null 和 undefined</h3><p>在 JavaScript 中我们知道 <code>typeof null</code>结果是 object,而<code>typeof undefined</code>结果是 undefined.这个 js 自身的问题在 ts 中被更正了.<br>null 和 undefined 分别有自己的类型分别叫做 null 和 undefined.<br>但是和 void 相似，它们的本身的类型用处不是很大：</p>
+<p><strong>ts 官网上文档说明:</strong><br><strong>默认情况下 null 和 undefined 是所有类型的子类型</strong><br>就是说你可以把 null 和 undefined 赋值给 number 类型的变量。<br>也就是说下面的 ts 代码是允许的?</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str: string = <span class="string">'abc'</span></span><br><span class="line">str = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+
+<p>或者是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> str: string = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>确实是这样</strong></p>
+<p>但是在<strong>严格模式</strong>下不行.严格模式下通过测试,两种写法都报错了<br><code>Type &#39;null&#39; is not assignable to type &#39;number&#39;.</code><br>很明显是类型错误.</p>
+<h3 id="Never"><a href="#Never" class="headerlink" title="Never"></a>Never</h3><p>never 类型表示的是那些永不存在的值的类型</p>
+<p>例如， never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型； 变量也可能是 never 类型，当它们被永不为真的类型保护所约束时。</p>
+<p>never 类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是 never 的子类型或可以赋值给 never 类型（除了 never 本身之外）。 即使 any 也不可以赋值给 never</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 返回never的函数必须存在无法达到的终点</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">message: string</span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 推断的返回值类型为never</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fail</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> error(<span class="string">"Something failed"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回never的函数必须存在无法达到的终点</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">infiniteLoop</span>(<span class="params"></span>): <span class="title">never</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p>object 表示非原始类型，也就是除 number，string，boolean，symbol，null 或 undefined 之外的类型。</p>
+<h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>通过类型断言这种方式可以告诉编译器，“相信我，我知道自己在干什么”。 类型断言好比其它语言里的类型转换，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 TypeScript 会假设你，程序员，已经进行了必须的检查。</p>
+<p>类型断言有两种形式。 其一是“尖括号”语法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> someValue: any = <span class="string">"this is a string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> strLength: number = (<span class="xml"><span class="tag">&lt;<span class="name">string</span>&gt;</span>someValue).length; //个人理解是用来说明someValue的类型的</span></span><br></pre></td></tr></table></figure>
+
+<p>其二是 as 语法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> someValue: any = <span class="string">"this is a string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> strLength: number = (someValue <span class="keyword">as</span> string).length;</span><br></pre></td></tr></table></figure>
+
+<p>两种形式是等价的</p>
+<p>但是在 jsx 中只有 as 语法的类型断言是被允许的</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Vue的性能优化</title>
     <url>/2019/12/25/vue%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<h2 id="1、v-if-和-v-show-区分使用场景"><a href="#1、v-if-和-v-show-区分使用场景" class="headerlink" title="1、v-if 和 v-show 区分使用场景"></a>1、v-if 和 v-show 区分使用场景</h2><p>v-if 是 真正 的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；<br>也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</p>
