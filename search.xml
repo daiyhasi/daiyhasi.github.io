@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2.ts中的函数</title>
+    <url>/2020/03/29/2.ts%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="ts-中的函数"><a href="#ts-中的函数" class="headerlink" title="ts 中的函数"></a>ts 中的函数</h3><ol>
+<li><p>ts 中的函数声明</p>
+<ol>
+<li>具名函数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Named function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x:number, y:number</span>):<span class="title">number</span> </span>&#123;</span><br><span class="line"> <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>匿名函数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">x:number,y:number</span>):<span class="title">number</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>书写完整函数类型<br>函数类型包含两部分：参数类型和返回值类型。</p>
+</li>
+<li><p>可选参数和默认参数<br>ts 在 es6 基础上增加了默认参数的另外一种写法,可选参数.<br>JavaScript 里，每个参数都是可选的，可传可不传。 没传参的时候，它的值就是 undefined。 在 TypeScript 里我们可以在参数名旁使用 ?实现可选参数的功能。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1:string, val2?:number</span>):<span class="title">void</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> val1 + <span class="string">" "</span> + val2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ts 中给函数传参必须与函数需求的参数个数一致.多传或少传都会报错,除非设置可选参数或默认参数</p>
+</li>
+<li><p>剩余参数<br>基本与 es6 中剩余参数概念一致,使用…运算符完成</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1: string, ...rest: any[]</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;val1&#125;</span> <span class="subst">$&#123;rest&#125;</span>`</span>)</span><br><span class="line">&#125;</span><br><span class="line">test(<span class="string">'nihao'</span>, <span class="number">123</span>, <span class="number">222</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这里 rest 是一个任意类型的数组,该数组会收集 test 函数从第二个参数开始往后的所有参数</p>
+</li>
+<li><p>this 指向问题</p>
+</li>
+<li><p>重载<br>不像 java,c#这种面向对象语言,js 中是没有函数重载的概念的,但是 ts 中实现了函数重载的功能.即同一个函数,传入不同的参数,完成的功能不一样.</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1: <span class="built_in">string</span>, val2: <span class="built_in">number</span></span>): <span class="title">void</span></span></span><br><span class="line"><span class="function"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1: <span class="built_in">number</span>, val2: <span class="built_in">string</span></span>): <span class="title">void</span></span></span></span><br><span class="line"><span class="function"><span class="function"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1: <span class="built_in">any</span>, val2: <span class="built_in">any</span></span>): <span class="title">any</span> </span>&#123;</span></span></span><br><span class="line"><span class="function"><span class="function">  <span class="title">if</span> (<span class="params"><span class="keyword">typeof</span> val1 === '<span class="built_in">string</span>'</span>) </span>&#123;</span></span><br><span class="line"><span class="function">    <span class="title">console</span>.<span class="title">log</span>(<span class="params">val1 + '这是前者'</span>)</span></span><br><span class="line"><span class="function">  &#125; <span class="title">else</span> </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这是后者'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">test(<span class="number">123</span>, <span class="string">'abc'</span>)</span><br></pre></td></tr></table></figure>
+<p>看起来像是函数重载,实际上编译完成之后还是变成了如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">val1, val2</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">if</span> (<span class="keyword">typeof</span> val1 === <span class="string">'string'</span>) &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(val1 + <span class="string">'这是前者'</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">else</span> &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">'这是后者'</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">test(<span class="number">123</span>, <span class="string">'abc'</span>);</span><br></pre></td></tr></table></figure>
+<p>所以我说只是形式上完成了 java 中的函数重载,但是这里的重载跟 java 中的重载还是有区别的</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>我的2020</title>
     <url>/2020/03/28/%E6%88%91%E7%9A%842020/</url>
     <content><![CDATA[<h2 id="我的-2020"><a href="#我的-2020" class="headerlink" title="我的 2020"></a>我的 2020</h2><p>给自己个关键字吧.<br><strong>迷惘的年轻人</strong></p>
