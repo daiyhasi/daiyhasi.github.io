@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>失业日记--失业第31天</title>
+    <url>/2020/08/11/%E5%A4%B1%E4%B8%9A%E6%97%A5%E8%AE%B0--%E5%A4%B1%E4%B8%9A%E7%AC%AC31%E5%A4%A9/</url>
+    <content><![CDATA[<h4 id="失业第31天"><a href="#失业第31天" class="headerlink" title="失业第31天"></a>失业第31天</h4><p>具体不知道第几天了,差不多得有一个月了吧.算是从今天开始写点东西吧.<br>记录下再次失业的我的状态(对的,不能再这样下去了!!)</p>
+<p>现在北京时间<code>2020年8月11日03:28:46</code>,还有几个小时天就要亮了,键盘声哒哒哒,空调风扇声嘟嘟响,耳鸣声若隐若现.不知道我已经是多少次经历这样的状态了.<br>熬夜,似乎已是我的常态,瞌睡来了倒头就睡现在好像也是我的常态,无规律,无节制,无计划,无头绪,现在也是我的常态</p>
+<p>现在必须做点什么了,定个小目标,从现在起,3天内完成 慕课网剩下的ts课程(拖了好久了)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Something in my life</title>
+    <url>/2020/08/11/Something%20in%20my%20life/</url>
+    <content><![CDATA[<h4 id="I-was-just-thinking…"><a href="#I-was-just-thinking…" class="headerlink" title="I was just thinking…"></a>I was just thinking…</h4><p>再次失业的第30天,我一直在思考一个问题,我这么多年来一直坚持的到底是什么.<br>总是得有个什么信仰的,对吧?可惜了,我没有.人生至此,二十有七,我最大的信仰也许就只是爱自己.自私,自利,胆小,懦弱,怠惰,懒散能用来形容一个人惰性的所有形容词应该都能在我身上找到,我很好奇,到底是什么原因造成我这个现状的.总结下我无聊的人生,应是无趣,无聊,毫无生气的一生.</p>
+<h3 id="平凡的人类啊"><a href="#平凡的人类啊" class="headerlink" title="平凡的人类啊!!"></a>平凡的人类啊!!</h3><p>能不能搞点有建树的事?<br>就真这样一辈子碌碌无为燃尽此生?</p>
+]]></content>
+  </entry>
+  <entry>
     <title>day03</title>
     <url>/2020/04/12/day03/</url>
     <content><![CDATA[<h5 id="也不算新知识吧-好久没怎么写-class-了-东西都忘了-好多东西虽然当时看的时候觉得自己好像记住了-可是很久不用-回头再来看-就感觉好像都学过-然后写东西的时候都不知道错在哪-还理直气壮的较劲-这就很难受了"><a href="#也不算新知识吧-好久没怎么写-class-了-东西都忘了-好多东西虽然当时看的时候觉得自己好像记住了-可是很久不用-回头再来看-就感觉好像都学过-然后写东西的时候都不知道错在哪-还理直气壮的较劲-这就很难受了" class="headerlink" title="也不算新知识吧,好久没怎么写 class 了,东西都忘了,好多东西虽然当时看的时候觉得自己好像记住了,可是很久不用,回头再来看,就感觉好像都学过,然后写东西的时候都不知道错在哪,还理直气壮的较劲.~~这就很难受了"></a>也不算新知识吧,好久没怎么写 class 了,东西都忘了,好多东西虽然当时看的时候觉得自己好像记住了,可是很久不用,回头再来看,就感觉好像都学过,然后写东西的时候都不知道错在哪,还理直气壮的较劲.~~这就很难受了</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  name = <span class="string">'luo'</span></span><br><span class="line">  <span class="keyword">constructor</span>(age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.age=<span class="string">'age'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
